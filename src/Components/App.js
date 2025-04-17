@@ -5,9 +5,7 @@ import Home from './Components/Home/Home.jsx'
 import About from './Components/About/About.jsx'
 import Contact from './Components/Contact/Contact.jsx'
 import Error from './Components/Error/Error.jsx'
-import Gallery from './Components/Gallery/Gallery.jsx'
-import Web from './Components/Web/Web.jsx'
-import Mobile from './Components/Mobile/Mobile.jsx'
+import Gallery from '../../app2/src/Components/Gallery/Gallery.jsx'
 
 
 
@@ -18,10 +16,7 @@ let routers = createBrowserRouter([
     {index:true,element:<Home/>},
     {path:'about',element:<About/>},
     {path:'Contact',element:<Contact/>},
-    {path:'gallery',element:<Gallery/>,children:[
-      {index:true,element:<Web />},
-      {path:'mobile',element:<Mobile />},
-    ]},
+    {path:'gallery',element:<Gallery/>},
     {path:'*',element:<Error/>},
   ]}
 ])
